@@ -1,0 +1,40 @@
+#	Header	Description
+1	Station name			The 3-5 character station name code
+2	Network name		The two-digit code for the seismographic network
+3	Distance			Epicentral distance between earthquake and station in degrees
+4	Station latitude		Station location latitude in degrees
+5	Station longitude		Station location longitude in degrees
+6	Event latitude			Earthquake hypocentral location latitude in degrees
+7	Event longitude		Earthquake hypocentral location longitude in degrees
+8	Event depth			Earthquake hypocentral location depth in km
+9	Event magnitude		Earthquake moment magnitude
+10	Origin time			Earthquake origin time, in format of yyyymmddhhmmss.ss, please load as numbers if opened in excel.
+11	Azimuth			Azimuth from earthquake to station (in degrees)
+12	Back azimuth			Back azimuth from station to earthquake (in degrees)
+13	Phase name			Either S, SS, SSS, Sdiff, ScS, or ScSScS
+14	Measured time		Travel time anomaly of phase onset time relative to PREM predicted time (observed minus PREM)
+15	Predicted time			Travel time prediction of the PREM model
+16	Amplitude			Amplitude of the peak of the phase, on instrument-deconvolved velocity recordings
+17	Radiation amplitude		Predicted amplitude between [-1,1] using the SH radiation pattern
+18	Flipped polarity flag		Record modeled after flipping polarity, which was explored for low radiation amplitudes (ranging between -0.15 and +0.15): “1” indicates time was measured from a flipped polarity record (otherwise 0)
+19	Main pulse start		Start time, relative to PREM prediction, of the beginning of the time window used to define the positive polarity pulse of the phase (on velocity recording), measured at the 10% amplitude level preceding the wave peak (used to auto-define the Misfit measurement windows)
+20	Main pulse end		As with Main pulse start, except for the end of the time window used to define the positive polarity pulse of the phase
+21	SNRaverage_amp		Signal-to-noise measurement from the average amplitude in the signal window to the average amplitude in the noise window
+22	SNRpeak-trough		Signal-to-noise measurement from the maximum peak-to-trough measurement within the main positive polarity pulse of the signal compared to the same in the noise window
+23	SNRmax_peak			Signal-to-noise measurement from the maximum peak in the main positive polarity pulse window compared to the maximum peak in the noise window
+24	MisfitSIGNAL			The average difference between the phase and the best-fit SEW over the main positive polarity pulse window (see Equation 1)
+25	MisfitPRE			As above, except over the window immediately preceding the phase with the same length as the main phase
+26	MisfitPOST			As above, except over the window immediately following the phase with the same length as the main phase
+27	MisfitPRE_2T			As above, except over the window immediately preceding MisfitPRE with the same length as the main phase
+28	MisfitPOST_2T			As above, except over the window immediately following MisfitPOST with the same length as the main phase
+29	t* 				Best-fit t* value that, when convolved with the SEW, gives the best fit to records that are broader than the SEW; this value is set to NaN if the record is narrower then SEW
+30	Stretch factor			A measure of the amount the SEW has to be narrowed to fit records that are narrower than the SEW 
+31	CCC[rec,SEW]			Cross-correlation coefficient between observed record (rec) and the best-fitting SEW adapted to the record
+32	CCC[rec,GEW]			Cross-correlation coefficient between observed record (rec) and the GEW which measures the record’s fit to the average phase shape for the event
+33	g_best-fit_SEW		Gaussian factor (g) of the best-fitting Gaussian function to a record’s best-fitting SEW
+34	g_event_SEW			Gaussian factor (g) of the best-fitting Gaussian function to the S wave SEW for the event (i.e., unstretched, un-t*’ed, as in Step 3, Section 3.1) 
+35	Misfit_g			The misfit measured between g_best-fit_SEW and g_event_SEW  which provides a different measure of record broadening
+36	w_comprehensive		An empirical comprehensive weight value for each record
+37	Noise window traffic 		If “traffic phases” are present in the noise window, this value is 1 (otherwise 0)
+38	Period				Estimated period of the phase measured on displacement recordings, from the start and end of the pulse measured at 0.1 amplitude (when peak is set to 1)
+39  PeriodFlag			Flag column to show if measured Period is outlier, a linear function is constructed between #39 and (#20 - #19), if period measurement is 1 standard deviation from this linear function, it is marked to 1, if period measurement is between 1 and 2 standard deviation from linear function, it is marked to 2, otherwise it is marked as 3
