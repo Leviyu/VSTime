@@ -1,9 +1,11 @@
 # VSTime
 ## Comprehensive dataset constructed with Empirical Wavelet and Virtual Stacking
 
-This comprehensive dataset is constructed with Empirical Wavelet and is presented as supplimentary material for [Exotic Seicic Phases Documentation With Virtual Stacking].
+This comprehensive dataset is constructed with Empirical Wavelet and is presented as supplimentary material for [Travel Time and Waveform Measurements of Global Multi-Bounce Seismic Waves Using Virtual Station Seismogram Stacks ].
 
-The file is in csv format and the header is explained in `./header.csv`, for detailed explanation of each term, please refer to the paper for more information.
+Two files are provided in csv format and the header is explained in the corresponding header file (Please refer to the paper for more information). The two files are:
+1. Multiple-bounce phase single station file - 'eventinfo.multi_phase_single_pick.csv'
+2. Virtual Stack file - 'eventinfo.virtual_stack.all.csv'
 
 We encourage user to refer to [Zenodo](https://zenodo.org/record/1299902#.XBfk6M_YpTY), as it contains our latest update on the dataset as well as the doi for the dataset.
 
