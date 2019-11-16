@@ -1,36 +1,36 @@
-# Header information of eventinfo file 
-
-1	Virtual station name	Phase name followed by a integer to represent the station name
-2	Distance	Epicentral distance between event and virtual station grid center in degrees
+#	Information	Description
+1	VS name			Phase name followed by an integer as a code to represent VS station name
+2	Distance		Epicentral distance between event and VS grid center in degrees
 3	Stack Number	Number of records that is used to stack for virtual stations
-4	Virtual Station latitude	Virtual Station location latitude in degrees
-5	Virtual Station longitude	Virtual Station location longitude in degrees
-6	Event latitude	Earthquake hypocentral location latitude in degrees
-7	Event longitude	Earthquake hypocentral location longitude in degrees
-8	Event depth	Earthquake hypocentral location depth in km
-9	Event magnitude	Earthquake moment magnitude
-10	Origin time	Earthquake origin time
-11	Azimuth	Azimuth from earthquake to virtual station grid (in degrees)
-12	Back azimuth	Back azimuth measured at grid station clockwise back to earthquake (in degrees)
-13	Phase name	S/ScS minor and major, including S, Sdiff, SS, SSm, S3, S3m, S4, S4m, S5, S5m, S6m, ScS3, ScS3m, ScS4, ScS4m, ScS5, ScS5m 
-14	Measured time	Travel time anomaly of phase onset relative to PREM (observed minus PREM)
-15	Predicted time	Travel time prediction of the PREM model
-16	Phase start	The start time, relative to PREM prediction, of the beginning of the time window used to define one pulse width of the phase on velocity recordings, measured at the 10% amplitude level preceding the wave peak (used to auto-define the Misfit measurement windows)
-17	Phase end	The end time, relative to the PREM prediction, of the end of the time window used to define one pulse width of the phase on velocity recordings, measured at the 10% amplitude level following the wave peak (used to auto-define the Misfit measurement windows)
-18	SNRvirtual_average_amp	Virtual station signal-to-noise measurement from the average amplitude of the signal to the average amplitude of the noise, as in equation (2)
-19	SNRaverage_record	Average SNRaverage_amp measurements of all records that is used to stack for virtual station
-20	SNRpeak_trough	Virtual station signal-to-noise measurement from the maximum peak-to-trough measurement within one period of the signal compared to noise, as in equation (3)
-21	MisfitSIGNAL	The average difference between the virtual station phase and the best-fit SEW over one period (see Equation 1)
-22	MisfitPRE	As above, except over one period preceding the phase
-23	MisfitPOST	As above, except over one period following the phase
-24	t* 	The best-fit t* value that, when convolved with the SEW, gives the best fit to records that are broader than the SEW
-25	Stretch factor	A measure of the amount the SEW has to be narrowed to fit records that are narrower than the SEW 
-26	CCC[rec,SEW]	Cross-correlation coefficient between observed record and the best-fitting SEW adapted to the record
-27	CCC[rec,GEW]	Cross-correlation coefficient between observed record and GEW, which measures the record’s fit to the average phase shape for the event
-28	g_best-fit_SEW	Gaussian factor of the best-fitting Gaussian function (equation 5) to a record’s best-fitting SEW
-29	g_event_SEW	Gaussian factor of the best-fitting Gaussian function (equation 5) to the S wave SEW for the event (i.e., unstretched, un-t*’ed, as in Step 3, Section 3.1) 
-30	Misfitg	The misfit measured between g_best-fit_SEW and g_event_SEW (computed as in equation 1) which provides a different measure of record broadening
-31	w_comprehensive	An empirical comprehensive weight value for each data (see equation 6)
-32	Noise window traffic flag	Records that have “traffic” (other seismic waves) predicted to arrive in the noise window (of the SNR measurement) are flagged as 1, otherwise 0
-33	Period	Estimated period of the phase, from the start and end of the pulse measured at 0.1 amplitude (when peak is set to 1) measured on displacement recordings
-34	Polarity	The predicted amplitude between [-1,1] using the SH radiation pattern
+4	VS latitude		VS location latitude in degrees
+5	VS longitude	VS location longitude in degrees
+6	Event latitude	Earthquake hypocentral location latitude in degreesb
+7	Event longitude	Earthquake hypocentral location longitude in degreesb
+8	Event depth		Earthquake hypocentral location depth in kmb
+9	Event magnitude	Earthquake moment magnitudeb
+10	Origin time		Earthquake origin timeb
+11	Azimuth			Azimuth from earthquake to VS grid (in degrees)
+12	Back azimuth	Back azimuth measured at VS clockwise back to earthquake (in degrees)
+13	Phase name		Either S, Sdiff, SS, SSm, S3, S3m, S4, S4m, S5, S5m, S6m, ScS, ScS2, ScS3, ScS3m, ScS4, ScS4m, ScS5, or ScS5m 
+14	Predicted time	Travel time prediction of the PREM model
+15	Measured time	Travel time anomaly of phase onset relative to PREM (observed minus PREM)
+16	Corrected time	Travel time anomaly of phase onset relative to PREM (observed minus PREM) corrected for over-broadened virtual station stack
+17	Phase start	The start time, relative to PREM prediction, of the beginning of the time window used to define one pulse width of VS phase of interest on velocity recordings, measured at the 10% amplitude level preceding the wave peak (used to auto-define the Misfit measurement windows)
+18	Phase end	The end time, relative to the PREM prediction, of the end of the time window used to define one pulse width of VS phase of interest on velocity recordings, measured at the 10% amplitude level following the wave peak (used to auto-define the Misfit measurement windows)
+19	SNR_VS			VS SNR measurement from the average amplitude of the signal to the average amplitude of the noise
+20	SNR Average 	SNR of all records used to create a VS stack 
+21	SNRpeak_trough	VS SNR measurement from the maximum peak-to-trough value within one period of the signal compared to noise
+22	MisfitSIGNAL	The average difference between the VS phase and the best-fit SEW over one period (as in Equation 2)
+23	MisfitPRE		As above, except over one period preceding the phase of interest
+24	MisfitPOST		As above, except over one period following the phase of interest
+25	t* 				The best-fit t* value that, when convolved with the SEW, gives the best-fit to records that are broader than the SEW
+26	Stretch factor	A measure of the amount the SEW has to be narrowed to fit records that are narrower than the SEW 
+27	CCC[rec,SEW]	Cross-correlation coefficient between observed record and the best-fitting SEW adapted to the record
+28	CCC[rec,GEW]	Cross-correlation coefficient between observed record and the GEW, which measures the record’s fit to the average S wave phase shape for the event
+29	g_best-fit_SEW	Gaussian factor of the best-fitting Gaussian function (g, Equation 1) to a record’s best-fitting SEW
+30	g_event_SEW	Gaussian factor of the best-fitting Gaussian function (g, Equation 1) to the GEW for the event 
+31	Misfitg	The misfit measured between g_best-fit_SEW and g_event_SEW (computed as in Equation 2) which provides a different measure of record broadening
+32	w_comprehensive	An empirical comprehensive weight value for each data (see Equation 3)
+33	Noise window traffic flag	Records that have “traffic” (interfering seismic waves) predicted to arrive in the noise window (of the SNR measurement) are flagged as 1, otherwise 0
+34	Period	Estimated period of the phase, from the start and end of the pulse measured at 0.1 amplitude (when peak is set to 1) measured on displacement recordings
+35	Polarity	The predicted amplitude between [-1,1] using the SH radiation pattern for the phase of interest
