@@ -34,5 +34,3 @@
 32	Noise window traffic flag	Records that have “traffic” (other seismic waves) predicted to arrive in the noise window (of the SNR measurement) are flagged as 1, otherwise 0
 33	Period	Estimated period of the phase, from the start and end of the pulse measured at 0.1 amplitude (when peak is set to 1) measured on displacement recordings
 34	Polarity	The predicted amplitude between [-1,1] using the SH radiation pattern
-35	QUALITY	The predicted quality flag, 1 means it is accepted, -1 means it is rejected
-36	PICK	Save as QUALITY, expect that this flag is corrected manually to reflect our choice accepting or rejecting the virtual stack
