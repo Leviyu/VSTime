@@ -1,7 +1,7 @@
 # VSTime
 ## Comprehensive dataset constructed with Empirical Wavelet and Virtual Stacking
 
-This comprehensive dataset is constructed with Empirical Wavelet and is presented as supplimentary material for [Travel Time and Waveform Measurements of Global Multi-Bounce Seismic Waves Using Virtual Station Seismogram Stacks ] (https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019GC008679).
+This comprehensive dataset is constructed with Empirical Wavelet and is presented as supplimentary material for [Travel Time and Waveform Measurements of Global Multi-Bounce Seismic Waves Using Virtual Station Seismogram Stacks ](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019GC008679).
 
 Two files are provided in csv format and the header is explained in the corresponding header file (Please refer to the paper for more information). The two files are:
 1. Multiple-bounce phase single station file - 'eventinfo.multi_phase_single_pick.csv'
